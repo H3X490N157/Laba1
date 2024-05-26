@@ -20,7 +20,7 @@ void destroy_polynomial(Polynomial* p) {
 }
 
 Polynomial* polynomial_add(const Polynomial* p1, const Polynomial* p2) {
-    if (p1->fieldInfo != p2->fieldInfo) return NULL; // Ensure same type
+    if (p1->fieldInfo != p2->fieldInfo) return NULL; 
     int max_degree = p1->degree > p2->degree ? p1->degree : p2->degree;
     Polynomial* result = create_polynomial(max_degree, p1->fieldInfo);
 
@@ -39,7 +39,7 @@ Polynomial* polynomial_add(const Polynomial* p1, const Polynomial* p2) {
 }
 
 Polynomial* polynomial_mul(const Polynomial* p1, const Polynomial* p2) {
-    if (p1->fieldInfo != p2->fieldInfo) return NULL; // Ensure same type
+    if (p1->fieldInfo != p2->fieldInfo) return NULL; 
     int result_degree = p1->degree + p2->degree;
     Polynomial* result = create_polynomial(result_degree, p1->fieldInfo);
 

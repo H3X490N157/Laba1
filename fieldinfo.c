@@ -4,7 +4,6 @@
 #include <string.h>
 #include <complex.h>
 
-// Integer operations
 void* int_add(const void* a, const void* b) {
     int* result = malloc(sizeof(int));
     *result = *(const int*)a + *(const int*)b;
@@ -38,7 +37,6 @@ const FieldInfo* GetIntFieldInfo() {
     return &intFieldInfo;
 }
 
-// Double operations
 void* double_add(const void* a, const void* b) {
     double* result = malloc(sizeof(double));
     *result = *(const double*)a + *(const double*)b;
@@ -72,7 +70,6 @@ const FieldInfo* GetDoubleFieldInfo() {
     return &doubleFieldInfo;
 }
 
-// Complex operations
 void* complex_add(const void* a, const void* b) {
     double complex* result = malloc(sizeof(double complex));
     *result = *(const double complex*)a + *(const double complex*)b;
